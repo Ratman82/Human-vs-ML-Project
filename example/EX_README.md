@@ -64,7 +64,7 @@ An example where the algorithm did not perform as expected is when the petal len
 
 These examples of success and failure highlight patterns in the data or limitations in our rules, such as the fact that there are some flowers with petal lengths that didn't perfectly fit our classification algorithm.
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/23ee1e49-da76-47c2-97b8-c8fbcbef179c" />
+<img width="315" alt="image" src="./e_human_algorithm/plots/human_correct_vs_incorrect.png" />
 
 ## Machine Learning Model
 

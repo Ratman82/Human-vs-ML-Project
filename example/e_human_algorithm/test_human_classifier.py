@@ -1,4 +1,7 @@
 import pandas as pd
+import os
+import matplotlib.pyplot as plt
+import seaborn as sns
 from example.e_human_algorithm.human_classifier import human_classify
 from example.e_data.fetch_data import load_iris_data
 from sklearn.model_selection import train_test_split
@@ -14,6 +17,7 @@ train_df, test_df = train_test_split(
 
 # This section of code applies the human classification algorithm to the test data.
 test_df['human_prediction'] = test_df['petal width'].apply(human_classify)
+test_df['correct'] = test_df['human_prediction'] == test_df[target_name]
 accuracy = (test_df['human_prediction'] == test_df[target_name]).mean()
 print(f"Human classifier accuracy: {accuracy:.2%}")
 
@@ -30,3 +34,26 @@ print(conf_matrix)
 failure_row = test_df[test_df['human_prediction'] != test_df[target_name]].iloc[0]
 print("\nFAILURE EXAMPLE")
 print(failure_row[['sepal width', 'petal width', target_name, 'human_prediction']])
+
+
+
+os.makedirs("example/e_human_algorithm/plots", exist_ok=True)
+
+plt.figure(figsize=(8, 6))
+sns.scatterplot(
+    data=test_df,
+    x='sepal width',
+    y='petal width',
+    hue='correct',   # True = correct, False = incorrect
+    style='correct',
+    s=100,
+    palette={True: 'green', False: 'red'}
+)
+
+plt.title('Human Algorithm: Correct vs Incorrect Predictions')
+plt.xlabel('Sepal Width (cm)')
+plt.ylabel('Petal Width (cm)')
+plt.legend(title='Prediction Correct')
+plt.grid(True)
+plt.savefig('example/e_human_algorithm/plots/human_correct_vs_incorrect.png', dpi=150)
+plt.close()
