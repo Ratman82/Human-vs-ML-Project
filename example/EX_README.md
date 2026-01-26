@@ -22,9 +22,9 @@ Predicted Attribute: Class of Iris Plant
 
 ## Getting Started
 
-<img src="e_getting_started/plots/sepal length_v_petal length.png" alt="X vs Y – Iris Dataset" width="300">
-<img src="e_getting_started/plots/sepal width_v_petal length.png" alt="X vs Y – Iris Dataset" width="300">
-<img src="e_getting_started/plots/sepal width_v_petal width.png" alt="X vs Y – Iris Dataset" width="300">
+<img src="e_getting_started/plots/sepal length_v_petal length.png" alt="X vs Y – Iris Dataset" width="400">
+<img src="e_getting_started/plots/sepal width_v_petal length.png" alt="X vs Y – Iris Dataset" width="400">
+<img src="e_getting_started/plots/sepal width_v_petal width.png" alt="X vs Y – Iris Dataset" width="400">
 
 
 ## Human Algorithm
@@ -90,4 +90,4 @@ The confusion matrix reveals that the model most often confuses Iris-virginica w
 
 Compared to the human algorithm, the KNN model shows different behavior when utilizing the KNN method, as seen in the visualization below.
 
-<img width="315" alt="image" src="./e_ml_model/plots/knn_model_training_results.png" />
+<img width="315" alt="image" src="./e_ml_model/plots/knn_model_test_results.png" />
