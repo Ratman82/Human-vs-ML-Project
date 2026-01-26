@@ -68,26 +68,26 @@ These examples of success and failure highlight patterns in the data or limitati
 
 ## Machine Learning Model
 
-We chose a value of k = ___ after comparing model performance across different values of k and observing that ___.
+We chose a value of k = 1 after comparing model performance across different values of k and observing that 1 was giving the most accurate results.
 
-When analyzing the outputs and metrics, we noticed that changing k affected ___, which influenced our final choice.
+When analyzing the outputs and metrics, we noticed that changing k to anything over 1 caused more errors, which influenced our final choice.
 
-Based on the results shown in the tables or visualizations, k = ___ best matched our goals for model performance because ___.
+Based on the results shown in the tables or visualizations, k = 1 best matched our goals for model performance because there was too much noise in the data.
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 97.78%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
+| Actual \\ Predicted | Iris-setosa | Iris-veriscolor | Iris-virginica |
 |-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+| Iris-setosa       |   15    |    0    |    0    |
+| Iris-versicolor   |    0    |   15    |    0    |
+| Iris-virginica    |    0    |    1    |   14    |
 
-The table/visualization shows a clear pattern where the model predicts ___ when ___, indicating a strong relationship between these features.
+The table/visualization shows a clear pattern where the model predicts iris varietal when petal width and peral length are considered, indicating a strong relationship between these features.
 
-The confusion matrix reveals that the model most often confuses ___ with ___, suggesting these classes have similar feature values.
+The confusion matrix reveals that the model most often confuses Iris-virginica with Iris-versicolor, suggesting these classes have similar feature values.
 
-Compared to the human algorithm, the KNN model shows different behavior when ___, as seen in the ___ visualization.
+Compared to the human algorithm, the KNN model shows different behavior when utilizing the KNN method, as seen in the visualization below.
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+<img width="315" alt="image" src="e_ml_model/plots/knn_correct_vs_incorrect.png" />

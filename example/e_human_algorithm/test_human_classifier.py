@@ -37,12 +37,12 @@ print(failure_row[['sepal width', 'petal width', target_name, 'human_prediction'
 
 
 
-os.makedirs("example/e_human_algorithm/plots", exist_ok=True)
+os.makedirs("example/e_ml_model/plots", exist_ok=True)
 
 plt.figure(figsize=(8, 6))
 sns.scatterplot(
     data=test_df,
-    x='sepal width',
+    x='petal length',
     y='petal width',
     hue='correct',
     style='correct',
@@ -51,9 +51,9 @@ sns.scatterplot(
 )
 
 plt.title('Human Algorithm: Correct vs Incorrect Predictions')
-plt.xlabel('Sepal Width (cm)')
+plt.xlabel('Petal Length (cm)')
 plt.ylabel('Petal Width (cm)')
 plt.legend(title='Prediction Correct')
 plt.grid(True)
-plt.savefig('example/e_human_algorithm/plots/human_correct_vs_incorrect.png', dpi=150)
+plt.savefig('example/e_ml_model/plots/knn_correct_vs_incorrect.png', dpi=150)
 plt.close()
