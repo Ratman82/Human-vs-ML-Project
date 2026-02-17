@@ -1,5 +1,5 @@
 import os
-from data.fetch_data import load_moves
+from test.data.fetch_data import load_moves
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
