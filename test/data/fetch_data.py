@@ -4,11 +4,11 @@ import matplotlib as plt
 import os
 
 def load_moves():
-    print('hello')
+    #print('hello')
     file_path = '/workspaces/Human-vs-ML-Project/test/data/metadata_pokemon_moves.csv'
 
     df = pd.read_csv(file_path)
-    print(df.head())
+    #print(df.head())
 
     target_name = "damage_class"
     X = df['pp']
