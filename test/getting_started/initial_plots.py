@@ -10,28 +10,27 @@ def make_plot(category1, category2):
     
 
     df, target_name = load_moves()
+    df = df.dropna(subset=['power'])
 
 
     plot_dir = "test/getting_started/plots"
     os.makedirs(plot_dir, exist_ok=True)
 
-    # 4. Plotting
-    plt.figure(figsize=(10, 6))
-    sns.scatterplot(
+    plt.figure(figsize=(20, 8))
+    sns.stripplot(
         data=df,
         x=category1,
         y=category2,
-        hue=target_name,
-        style=target_name,
-        palette="viridis",
-        s=100,
-        alpha=0.7
-    )
-
+        hue='accuracy',      
+        palette='viridis',
+        jitter=0.5,          
+        alpha=0.7,
+        size=5              
+    )   
     plt.title(f"{category2_label} vs {category1_label}")
     plt.xlabel(category1_label)
     plt.ylabel(category2_label)
-    plt.legend(title='Move ID', bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.legend(title='power', bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.grid(True, linestyle='--', alpha=0.6)
     plt.tight_layout()
 
@@ -41,4 +40,4 @@ def make_plot(category1, category2):
     plt.close()
 
 if __name__ == "__main__":
-    make_plot('id', 'damage_class')
+    make_plot('accuracy','power')

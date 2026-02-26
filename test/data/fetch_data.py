@@ -1,6 +1,6 @@
 import pandas as pd
 import seaborn as sns
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import os
 
 def load_moves():
@@ -10,7 +10,7 @@ def load_moves():
     df = pd.read_csv(file_path)
     #print(df.head())
 
-    target_name = "damage_class"
+    target_name = "power"
     X = df['pp']
     y = df[target_name]
     return df, target_name
