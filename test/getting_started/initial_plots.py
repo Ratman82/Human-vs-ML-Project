@@ -41,3 +41,6 @@ def make_plot(category1, category2):
 
 if __name__ == "__main__":
     make_plot('accuracy','power')
+
+#python3 -m test.getting_started.initial_plots
+#just the code to print the image
