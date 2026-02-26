@@ -18,22 +18,27 @@ You may work alone or with a partner. You may choose to work with the provided P
 ---
 
 **Team Members:**  
-- Name 1  
-- Name 2 (if applicable)  
+- Lukas  
 
 **Dataset Used:**  
-(e.g. Penguins, Iris, Titanic, etc.)
+Pokemon Movesets
 
 **Source:**  
-(UCI / Kaggle / Provided dataset)
+(Kaggle)
 
 **Target Variable (What we are predicting):**  
-(e.g. species, survival, diagnosis)
+(Move power based on accuracy)
+
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/accuracy_v_power.png" />
+
+<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+
+<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
 
 **Features Used:**  
-- Feature 1  
-- Feature 2  
-- Feature 3
+- Weak  
+- Decent  
+- Strong
 
 **[Video Review](https://)**
 

@@ -22,10 +22,10 @@ def make_plot(category1, category2):
         x=category1,
         y=category2,
         hue='accuracy',      
-        palette='viridis',
+        palette='turbo',
         jitter=0.5,          
         alpha=0.7,
-        size=5              
+        size=7              
     )   
     plt.title(f"{category2_label} vs {category1_label}")
     plt.xlabel(category1_label)
