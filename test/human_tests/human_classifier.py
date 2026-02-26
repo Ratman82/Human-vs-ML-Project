@@ -1,4 +1,4 @@
-def human_classify_move(power, accuracy):
+def human_classify(power, accuracy):
 
     if power < 50:
         power_class = "Weak"
