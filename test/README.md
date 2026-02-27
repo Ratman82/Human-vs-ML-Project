@@ -31,9 +31,9 @@ Pokemon Movesets
 
 <img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/accuracy_v_power.png" />
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/power_v_pp.png" />
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/id_v_accuracy.png" />
 
 **Features Used:**  
 - Weak  

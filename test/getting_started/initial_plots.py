@@ -21,11 +21,10 @@ def make_plot(category1, category2):
         data=df,
         x=category1,
         y=category2,
-        hue='accuracy',      
-        palette='turbo',
-        jitter=0.5,          
-        alpha=0.7,
-        size=7              
+        hue='damage_class',      
+        jitter=0.6,          
+        alpha=0.5,
+        s=7              
     )   
     plt.title(f"{category2_label} vs {category1_label}")
     plt.xlabel(category1_label)

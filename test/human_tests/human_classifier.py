@@ -1,2 +1,2 @@
-def human_classify():
+def human_classify(accuracy):
     
