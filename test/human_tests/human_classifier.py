@@ -1,7 +1,5 @@
-def human_classify(power):
-    if power < 0.6:
+def human_classify(power, pp):
+    if power < 50 and pp > 20:
         return 'Iris-setosa'
-    elif power < 1.6:
-        return 'Iris-versicolor'
     else:
         return 'Iris-virginica'
