@@ -1,5 +1,5 @@
 def human_classify(power, pp):
     if power < 50 and pp > 20:
-        return 'Iris-setosa'
+        return 'Physical'
     else:
-        return 'Iris-virginica'
+        return 'Special'
