@@ -8,8 +8,12 @@ from sklearn.model_selection import train_test_split
 
 df, target_name = load_moves()
 df = df.dropna(subset=[target_name])
+df = df[df['damage_class'] != 'Status']
 
-df['target_category'] = df.apply(human_classify, axis=1)
+df['target_category'] = df.apply(
+    lambda row: human_classify(row['power'], row['pp']),
+    axis=1
+)
 
 train_df, test_df = train_test_split(
     df,
@@ -19,16 +23,19 @@ train_df, test_df = train_test_split(
 )
 print(df)
 
-test_df['human_prediction'] = test_df.apply(human_classify, axis=1)
+test_df['human_prediction'] = test_df.apply(
+    lambda row: human_classify(row['power'], row['pp']),
+    axis=1
+)
 test_df['correct'] = test_df['human_prediction'] == test_df[target_name]
 accuracy = (test_df['human_prediction'] == test_df[target_name]).mean()
 print(f"Human classifier accuracy: {accuracy:.2%}")
 
 
 
-failure_row = test_df[test_df['human_prediction'] != test_df['target_category']].iloc[0]
+failure_row = test_df[test_df['human_prediction'] != test_df[target_name]]
 print("\nFAILURE EXAMPLE")
-print(failure_row[['pp', 'power', 'target_category', 'human_prediction']])
+print(failure_row[['human_prediction', target_name]])
 os.makedirs("example/e_ml_model/plots", exist_ok=True)
 plt.figure(figsize=(8, 6))
 sns.scatterplot(

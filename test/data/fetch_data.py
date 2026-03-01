@@ -10,10 +10,10 @@ def load_moves():
     df = pd.read_csv(file_path)
     #print(df.head())
 
-    target_name = "power"
+    target_name = "damage_class"
     X = df['pp']
     y = df[target_name]
     return df, target_name
 
 
-print(load_moves())
+#print(load_moves())
