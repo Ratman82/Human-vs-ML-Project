@@ -21,7 +21,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y
 )
 
-k = 1
+k = 4
 knn = KNeighborsClassifier(n_neighbors=k)
 knn.fit(X_train, y_train)
 y_pred = knn.predict(X_test)
@@ -63,8 +63,8 @@ sns.scatterplot(
 )
 
 plt.title('KNN Algorithm: Correct vs Incorrect Predictions')
-plt.xlabel('Petal Length (cm)')
-plt.ylabel('Petal Width (cm)')
+plt.xlabel('Power')
+plt.ylabel('PP')
 plt.legend(title='Prediction Correct')
 plt.grid(True)
 plt.savefig('test/ml_model/plots/knn_model_test_results.png', dpi=150)
