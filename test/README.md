@@ -26,7 +26,7 @@ Pokemon Movesets
 **Source:**  
 (Kaggle)
 
-**Target Variable (What we are predicting):**  
+**Target Variable (What I am predicting):**  
 (Move power based on accuracy)
 
 <img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/accuracy_v_power.png" />
@@ -36,9 +36,9 @@ Pokemon Movesets
 <img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/id_v_accuracy.png" />
 
 **Features Used:**  
-- Weak  
-- Decent  
-- Strong
+- Power
+- PP
+- Damage Class
 
 **[Video Review](https://)**
 
@@ -46,55 +46,61 @@ Pokemon Movesets
 
 ### Pseudo-Code
 ```text
-Write your human decision rules here.
+If its before 50 power and above 20 pp its Physical else its special.
+
+def human_classify(power, pp):
+    if power < 50 and pp > 20:
+        return 'Physical'
+    else:
+        return 'Special'
+
 ```
 
-When examining the data and visualizations, we focused on the features ___ and ___ because ___.
+When examining the data and visualizations, I focused on the features power and pp because the data set used didn't seem to have the best graphs.
 
-The plots/tables suggested a possible threshold for ___, and we considered values above or below this point to see how they might relate to ___.
+The plots/tables suggested a possible threshold for pp and power, and I considered values above or below this point to see how they might relate to Damage class.
 
-From the summary tables and visualizations, it appeared that ___ could influence classification, which led us to ___ in our decision rules.
+From the summary tables and visualizations, it appeared that both pp and power could influence classification, which led me to both in decision rules.
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 44.97%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
-|-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+Prediction:| Special | Actual:| Physical |
+Prediction:| Special | Actual:| Physical |
+Prediction:| Special | Actual:| Physical |
+Prediction:| Special | Actual:| Physical |
+Prediction:| Special | Actual:| Physical |
+Prediction:| Special | Actual:| Physical |
 
-One example where our algorithm worked well is when the inputs were ___, leading to a correct prediction of ___ because ___.
 
-An example where the algorithm did not perform as expected is when the inputs were ___, resulting in a prediction of ___ instead of ___, which may have happened because ___.
+For the human algorith it didnt really do well and got a less than 50% but it makes sense because the graph used it difficult to find a good pattern
 
-These examples of success and failure highlight patterns in the data or limitations in our rules, such as ___.
+An example where the algorithm did not perform as expected is when the inputs were to similar, resulting in a prediction of Special instead of Physical, which may have happened because there wasnt a clean method to sort them.
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/23ee1e49-da76-47c2-97b8-c8fbcbef179c" />
+These examples of success and failure highlight patterns in the data or limitations in our rules, such as the limited data to use in graphing.
+
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/human_tests/plots/human_model_training_results.png" />
 
 ## Machine Learning Model
 
-We chose a value of k = ___ after comparing model performance across different values of k and observing that ___.
+I chose a value of k = 4 after comparing model performance across different values of k and observing that it gave the best results.
 
-When analyzing the outputs and metrics, we noticed that changing k affected ___, which influenced our final choice.
+When analyzing the outputs and metrics, I noticed that changing k affected accuracy in the model, which influenced our final choice.
 
-Based on the results shown in the tables or visualizations, k = ___ best matched our goals for model performance because ___.
+Based on the results shown in the tables or visualizations, k = 4 best matched our goals for model performance because anything higher or lower gave worse results.
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 65.75%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
-|-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+Predicted  Physical  Special
+Actual                      
+Physical         80        8
+Special          42       16
 
-The table/visualization shows a clear pattern where the model predicts ___ when ___, indicating a strong relationship between these features.
+The confusion matrix reveals that the model most often confuses Special with Pyhysical, suggesting these classes have similar feature values.
 
-The confusion matrix reveals that the model most often confuses ___ with ___, suggesting these classes have similar feature values.
+Compared to the human algorithm, the KNN model shows different behavior when K= 4, as seen in the KNN visualization.
 
-Compared to the human algorithm, the KNN model shows different behavior when ___, as seen in the ___ visualization.
-
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/ml_model/plots/knn_model_test_results.png" />
