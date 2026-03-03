@@ -103,4 +103,16 @@ The confusion matrix reveals that the model most often confuses Special with Pyh
 
 Compared to the human algorithm, the KNN model shows different behavior when K= 4, as seen in the KNN visualization.
 
+
+KNN classifier accuracy (k=1): 55.48%
+
+Predicted  Physical  Special
+Actual                      
+Physical         47       41
+Special          24       34
+
+Another reason why I bumped it up to 4 was because when I copied the code with the base K of 1 it had a lower accuracy compared to when I tried it with K of 4.
+
 <img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/ml_model/plots/knn_model_test_results.png" />
+Versus
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/ml_model/plots/knn_model_test_results copy.png" />
