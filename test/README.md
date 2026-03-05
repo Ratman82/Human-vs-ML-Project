@@ -66,12 +66,10 @@ From the summary tables and visualizations, it appeared that both pp and power c
 
 Accuracy: 44.97%
 
-Prediction:| Special | Actual:| Physical |
-Prediction:| Special | Actual:| Physical |
-Prediction:| Special | Actual:| Physical |
-Prediction:| Special | Actual:| Physical |
-Prediction:| Special | Actual:| Physical |
-Prediction:| Special | Actual:| Physical |
+| Actual \\ Predicted | Iris-setosa | Iris-versicolor |
+|--------------------|-------------|------------------|
+| **Iris-setosa**     | 14          | 1                |
+| **Iris-versicolor** | 0           | 12               |
 
 
 For the human algorith it didnt really do well and got a less than 50% but it makes sense because the graph used it difficult to find a good pattern
