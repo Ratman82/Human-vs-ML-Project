@@ -21,7 +21,7 @@ train_df, test_df = train_test_split(
     random_state=42,
     stratify=df['target_category']
 )
-print(df)
+#print(df)
 
 test_df['human_prediction'] = test_df.apply(
     lambda row: human_classify(row['power'], row['pp']),
@@ -32,16 +32,17 @@ accuracy = (test_df['human_prediction'] == test_df[target_name]).mean()
 print(f"Human classifier accuracy: {accuracy:.2%}")
 
 
-
 failure_row = test_df[test_df['human_prediction'] != test_df[target_name]]
 print("\nFAILURE EXAMPLE")
 print(failure_row[['human_prediction', target_name]])
-os.makedirs("example/e_ml_model/plots", exist_ok=True)
+os.makedirs("test/human_tests/plots", exist_ok=True)
+
 plt.figure(figsize=(8, 6))
 sns.scatterplot(
     data=test_df,
     x='power',
     y='pp',
+
     hue='correct',
     style='correct',
     s=100,
