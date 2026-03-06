@@ -28,9 +28,10 @@ Pokemon Movesets
 
 **Target Variable (What I am predicting):**  
 (Move power based on accuracy)
+Graph used
+<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/power_v_pp.png" />
 
-<img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/accuracy_v_power.png" />
-
+Graphs tested for what they would look like
 <img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/power_v_pp.png" />
 
 <img width="315" height="334" alt="image" src="/workspaces/Human-vs-ML-Project/test/getting_started/plots/id_v_accuracy.png" />
