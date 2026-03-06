@@ -41,7 +41,7 @@ Graphs tested for what they would look like
 - PP
 - Damage Class
 
-**[Video Review](https://)**
+**[Video Review](https://youtu.be/GO86UI4TY0g)**
 
 ## Human Algorithm
 
