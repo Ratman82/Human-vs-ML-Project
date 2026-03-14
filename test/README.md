@@ -67,11 +67,7 @@ From the summary tables and visualizations, it appeared that both pp and power c
 
 Accuracy: 44.97%
 
-| Actual \\ Predicted | Iris-setosa | Iris-versicolor |
-|--------------------|-------------|------------------|
-| **Iris-setosa**     | 14          | 1                |
-| **Iris-versicolor** | 0           | 12               |
-
+Didn't Have a model due to best human attempt resulting in a failure example
 
 For the human algorith it didnt really do well and got a less than 50% but it makes sense because the graph used it difficult to find a good pattern
 
@@ -93,10 +89,14 @@ Based on the results shown in the tables or visualizations, k = 4 best matched o
 
 Accuracy: 65.75%
 
-Predicted  Physical  Special
-Actual                      
-Physical         80        8
-Special          42       16
+
+
+
+| Actual \\ Predicted | Physical | Special |
+|--------------------|-------------|------------------|
+| Physical     | 80          | 8                |
+| Special  | 42           | 16               |
+
 
 The confusion matrix reveals that the model most often confuses Special with Pyhysical, suggesting these classes have similar feature values.
 
@@ -105,10 +105,12 @@ Compared to the human algorithm, the KNN model shows different behavior when K= 
 
 KNN classifier accuracy (k=1): 55.48%
 
-Predicted  Physical  Special
-Actual                      
-Physical         47       41
-Special          24       34
+
+| Actual \\ Predicted | Physical | Special |
+|--------------------|-------------|------------------|
+| Physical     | 47          | 41                |
+| Special  | 24           | 34               |
+
 
 Another reason why I bumped it up to 4 was because when I copied the code with the base K of 1 it had a lower accuracy compared to when I tried it with K of 4.
 
